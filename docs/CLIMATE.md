@@ -92,12 +92,13 @@ ESPHome configuration example:
 ```yaml
 esphome:
   name: my_espir
-  platform: ESP8266
+
+esp8266:
   board: esp01_1m
 
 api:
-  services:
-    - service: send_raw_command
+  actions:
+    - actions: send_raw_command
       variables:
         command: int[]
       then:
